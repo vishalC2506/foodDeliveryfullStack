@@ -59,7 +59,7 @@ const NavBar = () => {
                     ""
                   )}
                   {!localStorage.getItem("authToken") ? (
-                    <div className="flex ">
+                    <div className="flex flex-col md:flex-row ">
                       <button
                         className="border-1 mx-1 hover:drop-shadow-[0.1rem_0.1rem_0.5rem_rgba(6,74,16,0.8)] 
                   rounded-md px-2 duration-300 ease-in-out"
