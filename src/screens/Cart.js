@@ -53,18 +53,18 @@ function Cart() {
           <div ></div>
           <tbody>
             {data.map((food, index) => (
-              <tr className="text-ecllipse space-y-2 ">
+              <tr className="text-ecllipse space-y-2   ">
                 <th scope="row" className="text-center">
                   {index + 1}
                 </th>
-                <td className="text-center px-1">{food.name}</td>
-                <td className="text-center px-1">{food.qty}</td>
-                <td className="text-center px-1">{food.size}</td>
-                <td className="text-center px-1">{food.price}</td>
-                <td className="text-center px-1">
+                <td className="text-center px-1 my-2">{food.name}</td>
+                <td className="text-center px-1 my-2">{food.qty}</td>
+                <td className="text-center px-1 my-2">{food.size}</td>
+                <td className="text-center px-1 my-2">{food.price}</td>
+                <td className="text-center px-1 my-2">
                   <button
                     type="button"
-                    className="px-2 py-2 border-1 bg-red-400 rounded-md font-semibold 
+                    className="px-2 py-2 border-1 bg-red-400 my-2 rounded-md font-semibold 
                 drop-shadow-[2px_2px_2px_rgba(0,0,0,0.5)] hover:drop-shadow-[2px_2px_2px_rgba(0,0,0,1)] 
                 duration-300 delay-150 ease-in-out hover:bg-green-500 hover:text-white h-8 flex items-center"
                   >
