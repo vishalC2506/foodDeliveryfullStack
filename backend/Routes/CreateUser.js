@@ -4,7 +4,6 @@ const dotenv = require("dotenv");
 const { body, validationResult } = require("express-validator");
 const User = require("../models/User");
 const jwt = require("jsonwebtoken");
-dotenv.config({ path: "../env" });
 const SecretKey = process.env.JWT_SECRET_KEY;
 const bcrypt = require("bcryptjs");
 router.post(
@@ -68,7 +67,7 @@ router.post(
       return res.json({ success: true, authToken: authToken });
     } catch (err) {
       console.log(err);
-      res.json({ success: false });
+      return res.status(400).json({ error: err });
     }
   }
 );

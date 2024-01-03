@@ -13,7 +13,7 @@ function Login() {
     e.preventDefault();
 
     try {
-      const response = await fetch("http://localhost:4000/api/loginuser", {
+      const response = await fetch("https://food-backend-g0hw.onrender.com/api/loginuser", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -22,6 +22,7 @@ function Login() {
         }),
       });
       const json = await response.json();
+    
       if (!json.success) {
         alert("enter valid credentials");
       }

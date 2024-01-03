@@ -12,7 +12,7 @@ const Home = () => {
     setSearch(e.target.value);
   };
   const loadData = async () => {
-    let response = await fetch("http://localhost:4000/api/foodData", {
+    let response = await fetch("https://food-backend-g0hw.onrender.com/api/foodData", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
     });

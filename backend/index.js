@@ -1,6 +1,7 @@
+require("dotenv").config()
 const express = require("express");
 const app = express();
-const port = 4000;
+const port = process.env.PORT||4000 ;
 const cors = require("cors");
 const mongoDB = require("./db");
 mongoDB();
@@ -14,5 +15,5 @@ app.use("/api", require("./Routes/CreateUser"));
 app.use("/api", require("./Routes/DisplayData"));
 app.use("/api", require("./Routes/OrderData"));
 app.listen(port, () => {
-  console.log(`listening ${port}`);
+  console.log(`listening ${port} ${process.env}`);
 });

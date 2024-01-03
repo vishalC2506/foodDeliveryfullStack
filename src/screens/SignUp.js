@@ -12,19 +12,21 @@ function SignUp() {
   });
   const handleSubmit = async (e) => {
     e.preventDefault();
-   // console.log(credentials);
+    // console.log(credentials);
     try {
-      const response = await fetch("http://localhost:4000/api/createuser", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          name: credentials.name,
-          password: credentials.password,
-          location: credentials.geolocation,
-          email: credentials.email,
-        }),
-      });
-  
+      const response = await fetch(
+        "https://food-backend-g0hw.onrender.com/api/createuser",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            name: credentials.name,
+            password: credentials.password,
+            location: credentials.geolocation,
+            email: credentials.email,
+          }),
+        }
+      );
 
       const json = await response.json();
 
