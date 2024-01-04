@@ -21,12 +21,12 @@ const NavBar = () => {
   };
   return (
     <>
-      <Navbar expand="lg" className="bg-gray-500">
+      <Navbar expand="xl" className="bg-gray-500">
         <Container className="">
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="w-full me-auto">
-              <div className="flex flex-col md:flex-row w-full ">
+              <div className="flex flex-col xl:flex-row w-full ">
                 <div className=" px-2  w-[clamp(8rem,10rem,15rem)] ">
                   <Nav.Link className="w-full">
                     <Link
@@ -39,7 +39,7 @@ const NavBar = () => {
                     </Link>
                   </Nav.Link>
                 </div>
-                <div className="flex flex-col md:flex-row justify-between  mx-2 w-[85%]  ">
+                <div className="flex flex-col xl:flex-row justify-between  mx-2 w-[85%]  ">
                   <Link
                     to="/"
                     className="no-underline duration-300 ease-in-out text-white m-2 font-bold tracking-wide  text-lg
@@ -59,9 +59,9 @@ const NavBar = () => {
                     ""
                   )}
                   {!localStorage.getItem("authToken") ? (
-                    <div className="flex flex-col md:flex-row ">
+                    <div className="flex flex-col xl:flex-row ">
                       <button
-                        className="border-1 mx-1 hover:drop-shadow-[0.1rem_0.1rem_0.5rem_rgba(6,74,16,0.8)] 
+                        className="border-1 py-1 w-24 sm:w-34  m-2 hover:drop-shadow-[0.1rem_0.1rem_0.5rem_rgba(6,74,16,0.8)] 
                   rounded-md px-2 duration-300 ease-in-out"
                       >
                         <Link
@@ -73,7 +73,7 @@ const NavBar = () => {
                         </Link>
                       </button>
                       <button
-                        className="border-1 mx-1 py-1 duration-300 ease-in-out
+                        className="border-1 py-1 w-24 sm:w-34  duration-300 ease-in-out m-2
                    hover:drop-shadow-[0.1rem_0.1rem_0.5rem_rgba(6,74,16,0.8)] rounded-md px-2"
                       >
                         <Link
@@ -86,7 +86,7 @@ const NavBar = () => {
                       </button>
                     </div>
                   ) : (
-                    <div className="flex flex-col md:flex-row">
+                    <div className="flex flex-col xl:flex-row">
                       <button
                         className="border-1  mx-1 py-1 rounded-md px-2 duration-300 ease-in-out
                      no-underline text-white m-2 font-bold tracking-wide  text-lg  w-[10rem] sm:w-[8rem]
