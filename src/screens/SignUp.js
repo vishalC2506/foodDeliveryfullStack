@@ -2,8 +2,10 @@ import { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function SignUp() {
+  const history = useNavigate();
   const [credentials, setCredentials] = useState({
     name: "",
     email: "",
@@ -32,6 +34,10 @@ function SignUp() {
 
       if (!json.success) {
         alert("enter valid credentials");
+      } else {
+        localStorage.setItem("userEmail", credentials.email);
+        localStorage.setItem("authToken", json.authToken);
+        history("/");
       }
     } catch (err) {
       console.log(`error durning signup ${err}`);
